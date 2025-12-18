@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="card">
+  <h2>Create Account</h2>
+
+  <form method="post">
+    {% csrf_token %} {{ form.errors }}
+
+    <label>Username</label>
+    {{ form.username }}
+
+    <label>Password</label>
+    {{ form.password1 }}
+
+    <label>Confirm Password</label>
+    {{ form.password2 }}
+
+    <button type="submit">Register</button>
+  </form>
+
+  <div class="form-link">
+    Already have an account?
+    <a href="{% url 'login' %}">Login</a>
+  </div>
+</div>
+
+{% endblock %}

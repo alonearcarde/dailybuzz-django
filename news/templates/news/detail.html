@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>{{ article.title }}</h1>
+<p>{{ article.content }}</p>
+
+<h3>Comments</h3>
+{% for c in comments %}
+<p><b>{{ c.user }}</b>: {{ c.text }}</p>
+{% endfor %} {% if user.is_authenticated %}
+<form method="post">
+  {% csrf_token %}
+  <textarea name="comment"></textarea>
+  <button type="submit">Post</button>
+</form>
+{% else %}
+<p>Please login to comment.</p>
+{% endif %} {% endblock %}

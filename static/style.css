@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  background: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h1 {
+  color: #764ba2;
+}
+
+.navbar a,
+.navbar button {
+  text-decoration: none;
+  color: #764ba2;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  width: 380px;
+  margin: 80px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Forms */
+form label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: #667eea;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #5a67d8;
+}
+
+/* Links */
+.form-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.form-link a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Messages */
+.errorlist {
+  color: red;
+  list-style: none;
+  margin-bottom: 10px;
+}

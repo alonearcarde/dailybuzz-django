@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block content %}
+
+<form method="get">
+  <input type="text" name="q" placeholder="Search news" />
+  <button type="submit">Search</button>
+</form>
+
+{% for article in page_obj %}
+<h2>
+  <a href="{% url 'detail' article.id %}"> {{ article.title }} </a>
+</h2>
+{% endfor %} {% if page_obj.has_previous %}
+<a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+{% endif %} {% if page_obj.has_next %}
+<a href="?page={{ page_obj.next_page_number }}">Next</a>
+{% endif %} {% endblock %}
